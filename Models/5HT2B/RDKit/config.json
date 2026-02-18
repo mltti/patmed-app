@@ -1,0 +1,32 @@
+{
+  "args": {
+    "dataset": [
+      "dataset_5HT2b"
+    ],
+    "representation": "Featurizer",
+    "descriptors": null,
+    "model": [
+      "RDKitEnsemble"
+    ],
+    "source": "csv",
+    "csv_dir": "datasets",
+    "seed": 42,
+    "val_size": 0.1,
+    "test_size": 0.2,
+    "batch_size": 128,
+    "device": "auto",
+    "patience": 10,
+    "threshold": 0.5,
+    "feature_selection": false,
+    "tune": false,
+    "tune_trials": 30,
+    "tune_timeout": null,
+    "opt_metric": "pr_auc",
+    "ensemble_n_splits": 5,
+    "ensemble_use_mlp": 1,
+    "ensemble_use_extratrees": 1,
+    "ensemble_use_mlp_desc": 1,
+    "ensemble_use_lr_desc": 1
+  },
+  "device": "cpu"
+}

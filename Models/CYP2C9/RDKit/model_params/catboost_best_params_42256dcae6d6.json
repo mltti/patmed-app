@@ -1,0 +1,30 @@
+{
+  "best_params": {
+    "iterations": 2000,
+    "depth": 6,
+    "learning_rate": 0.05,
+    "l2_leaf_reg": 3.0,
+    "border_count": 64,
+    "random_strength": 0.1,
+    "bagging_temperature": 0.5,
+    "verbose": 0,
+    "loss_function": "Logloss",
+    "eval_metric": "PRAUC",
+    "use_best_model": true,
+    "scale_pos_weight": 3.230769230769231,
+    "allow_writing_files": false
+  },
+  "metadata": {
+    "split_id": "42256dcae6d6",
+    "selector_path": "runs\\2026-02-17_17-51-51\\dataset_2C9\\RDKitEnsemble\\feature_selectors\\feature_selector_42256dcae6d6.pkl",
+    "n_samples": 440,
+    "tuned": false,
+    "cv_folds": 5,
+    "seeds": [
+      42,
+      123,
+      999
+    ],
+    "opt_metric": "PR_AUC"
+  }
+}
