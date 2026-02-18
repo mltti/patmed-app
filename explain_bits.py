@@ -13,7 +13,7 @@ from sklearn.ensemble import RandomForestClassifier
 from pathlib import Path
 from rdkit import Chem
 from rdkit.Chem import Draw
-from patmed.NN_models import MODEL_REGISTRY
+from NN_models import MODEL_REGISTRY
 
 
 def explain(SMILES, model_dir, number):
