@@ -1,4 +1,3 @@
-import argparse
 import json
 import joblib
 import torch
@@ -6,7 +5,6 @@ import os
 import random
 import pandas as pd
 import numpy as np
-from datetime import datetime
 from xgboost import XGBClassifier
 from lightgbm import LGBMClassifier
 from sklearn.ensemble import RandomForestClassifier
@@ -45,7 +43,7 @@ def predicted_toxicity(smiles_list, model, highlight_target):
     return tox_data
 
 def predict(model_dir, dataset):
-    module_repr = __import__("patmed.representations",fromlist=["Representations"])
+    module_repr = __import__("representations",fromlist=["Representations"])
 
     config_path = os.path.join(model_dir, 'config.json')
     

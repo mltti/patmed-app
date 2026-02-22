@@ -17,8 +17,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 from rdkit.Chem import Descriptors, Lipinski
 import plotly.express as px
-import numpy as np
-import plotly.express as px
 from rdkit.Chem import rdMolDescriptors
 
 # --- Funkcja do generowania fingerprintów ---
@@ -201,9 +199,9 @@ def main_page():
         st.subheader("Wybierz modele, które mają być użyte do predykcji:")
         col1, col2 = st.columns([1,1])
         with col1:
-            select_0 = st.checkbox("(brak)", value=True)
-            select_100 = st.checkbox("(100%)", value=True)
-            select_random = st.checkbox("(losowo)", value=True)
+            select_0 = False #st.checkbox("(brak)", value=False)
+            select_100 = False #st.checkbox("(100%)", value=False)
+            select_random = False #st.checkbox("(losowo)", value=False)
             st.divider()
             select_NN = st.checkbox("NN MLP", value=False)
             select_RF1 = st.checkbox("RF1", value=False)
@@ -212,6 +210,7 @@ def main_page():
             select_RDKit = st.checkbox("RDKit Ensamble", value=False)
             if select_RDKit:
                 st.warning("Brak modeli RDKitEnsamble dla receptorów hERG i M2.")
+            st.divider()
         with col2:
             st.write("NN MLP - Neural Network Multi-layered Perceptron.")
             if st.button("Więcej informacji", key=0):
@@ -283,6 +282,8 @@ def main_page():
                 label_visibility="collapsed",
                 width=500
             )
+            if st.session_state["highlight_model"] != st.session_state["highlight_target"]:
+                st.warning("Podświetlanie jeszcze nie zaimplementowane")
             st.session_state["tag_filter"] = st.selectbox(
                 "Wyswietlaj cząsteczki:",
                 [
